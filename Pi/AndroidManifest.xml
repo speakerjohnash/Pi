@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bluebird.pi"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="7" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        
+        <activity
+            android:label="@string/app_name"
+            android:name=".LoadActivity" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ResetAlarmsActivity"
+            	  android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+        <activity
+            android:name="SleepAlarmActivity" 
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+        <activity
+            android:name="WakeAlarmActivity" 
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+        <activity android:name="TutorialActivity"></activity>
+        <activity android:name="GraphActivity"></activity>
+        <activity android:name="org.achartengine.GraphicalActivity"></activity>
+        <activity android:name="PreferencesActivity"></activity>
+        <activity android:name="TempDBActivity"></activity>
+        <activity android:name="TempCanvasActivity"></activity>
+        
+        <receiver android:name="WakeAlarm"></receiver>
+        <receiver android:name="SleepAlarm"></receiver>
+        <receiver android:name="ResetAlarms">
+        <intent-filter>
+            <action android:name="android.intent.action.BOOT_COMPLETED"/>
+        </intent-filter>
+    	</receiver>
+    	
+    </application>
+	<uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+</manifest>

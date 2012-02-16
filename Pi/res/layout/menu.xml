@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_database"
+          android:icon="@drawable/menu_database"
+          android:title="Database" />
+    <item android:id="@+id/menu_graph"
+          android:icon="@drawable/menu_graph"
+          android:title="Graph" />
+    <item android:id="@+id/menu_canvas"
+          android:icon="@drawable/menu_canvas"
+          android:title="Canvas" />
+</menu>
